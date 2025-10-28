@@ -1,9 +1,9 @@
-//let ans = document.querySelector(".answer");//
+
 let pAns = document.createElement("p");
 
 //produce a random 1 digit number (0-9)
 function random1(){
-    pAns.textContent = Math.floor((Math.random() * 10));
+   pAns.textContent = Math.floor((Math.random() * 10));
 }
 //produce a random 2 digit number (10-99)
 function random2(){
@@ -44,8 +44,8 @@ function random10(){
 
 
 let formbox = document.querySelector(".form");
+let display = document.querySelector(".display");
 let error = document.createElement("p");
-
 
 
 function generator(){
@@ -90,10 +90,22 @@ function generator(){
     
     error.textContent = text;
     formbox.appendChild(error);
-    formbox.appendChild(pAns);
+    display.appendChild(pAns);
 }
 
 
 
+let ptextVersion = document.createElement("p");
+
+
 const button = document.querySelector(".btn");
-button.addEventListener("click", generator);
+button.addEventListener("click", () => {
+    generator();
+    
+    let num = parseInt(pAns.textContent);
+    let textVersion = numberToWords.toWords(num);
+
+    ptextVersion.textContent = textVersion;
+    display.appendChild(ptextVersion);
+    
+});

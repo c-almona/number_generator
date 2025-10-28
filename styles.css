@@ -7,14 +7,14 @@ body {
     background-color: 	#ADD8E6;
 }
 
-h1 {
+.display, h1 {
     text-align: center;
     font-family: monospace;
     font-size: 50px;
     color: #F0FFFF;
 }
 
-.form {
+.form, .display {
     height: fit-content;
     width:fit-content;
     margin-left:auto;
@@ -25,9 +25,7 @@ h1 {
     display:inline-block;
 }
 
-div p:last-child {
-    font-size: 100px;
-    font-family: monospace;
-    color: #F0FFFF;
+.intro{
+    text-align: center;
 }
 

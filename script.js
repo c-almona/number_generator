@@ -1,4 +1,4 @@
-let ans = document.querySelector(".answer");
+//let ans = document.querySelector(".answer");//
 let pAns = document.createElement("p");
 
 //produce a random 1 digit number (0-9)
@@ -90,7 +90,7 @@ function generator(){
     
     error.textContent = text;
     formbox.appendChild(error);
-    ans.appendChild(pAns);
+    formbox.appendChild(pAns);
 }
 
 
